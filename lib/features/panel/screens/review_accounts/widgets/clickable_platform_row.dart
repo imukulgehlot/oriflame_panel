@@ -42,7 +42,7 @@ class ClickablePlatformRow extends StatelessWidget {
           children: [
             CustomSvgAssetImage(
               image: AppImages.icOpenURL,
-              size: Dimensions.w16,
+              size: Dimensions.w16
             ),
             SizedBox(width: Dimensions.w3),
             Text(
