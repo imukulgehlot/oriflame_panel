@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="$FLUTTER_BASE_HREF" />
+  <meta charset="UTF-8" />
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <meta name="description" content="Oriflame panel web app!" />
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="oriflame_panel" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>oriflame_panel</title>
+  <link rel="manifest" href="manifest.json" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #ffffff;
+    }
+
+    .loader-container {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blinking {
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- 🌀 PNG Loader -->
+<div class="loader-container" id="loader">
+  <img
+          src="icons/app_icon.png"
+          class="blinking"
+          style="width: auto; height: 60px;"
+          alt="Loading..."
+  />
+</div>
+
+<!-- Flutter App Script -->
+<script src="flutter_bootstrap.js" async></script>
+
+
+</body>
+</html>
