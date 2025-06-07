@@ -12,6 +12,7 @@ import 'icon_label_tile.dart';
 class AccountDetailView extends StatelessWidget {
   final PageController pageController;
   final VoidCallback onNextPage;
+  final bool isArchived;
   final Function(int index) onPageChanged;
   final Function(
     String userID,
@@ -27,7 +28,7 @@ class AccountDetailView extends StatelessWidget {
       required this.onPageChanged,
       required this.users,
       required this.onActionTap,
-      required this.onNextPage});
+      required this.onNextPage, required this.isArchived});
 
   final Rxn<bool> isApproved = Rxn();
 
@@ -282,6 +283,7 @@ class AccountDetailView extends StatelessWidget {
                           spacing: Dimensions.w20,
                           children: [
                             // Decline
+                            if(!isArchived)
                             ActionButton(
                               iconAsset: AppImages.icDeclineCross,
                               label: AppString.decline,
@@ -300,6 +302,7 @@ class AccountDetailView extends StatelessWidget {
                                       MediaQuery.sizeOf(context).width * 0.07),
                               backgroundColor: AppColors.redColor,
                             ),
+
                             // Approve
                             ActionButton(
                               iconAsset: AppImages.icApproveCheck,

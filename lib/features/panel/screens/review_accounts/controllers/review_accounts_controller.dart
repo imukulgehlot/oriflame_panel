@@ -8,6 +8,8 @@ import '../../../../../core/models/ui_models/review_account_ui_model.dart'
     show SocialUserUIModel;
 
 class ReviewAccountsController extends GetxController {
+  late final bool isArchived;
+
   final List<String> options = ['Date Connected', 'Username'];
   final RxString selectedValue = 'Date Connected'.obs;
   final RxBool isAscending = true.obs;
@@ -439,6 +441,7 @@ class ReviewAccountsController extends GetxController {
         barrierColor: AppColors.blackColor.withValues(alpha: 0.6),
         transitionDuration: const Duration(milliseconds: 400),
         pageBuilder: (_, __, ___) => ReviewProfileDetailsDialog(
+          isArchived: isArchived,
           users: isSearching.value ? searchedAccounts : accounts,
           userID: userID,
           onActionTap: onActionTap,

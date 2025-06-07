@@ -89,6 +89,7 @@ class ReviewAccountTopTile extends StatelessWidget {
                       iconAsset: AppImages.icArchive,
                       label: AppString.archive,
                       borderColor: AppColors.primaryColor,
+                      textColor: AppColors.primaryColor,
                       onPressed: () {
                         void showArchivedTabOverlay(BuildContext context) {
                           showGeneralDialog(

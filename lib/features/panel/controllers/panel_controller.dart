@@ -12,7 +12,6 @@ import 'package:oriflame_panel/features/panel/screens/hashtags/hashtags_tab.dart
 import 'package:oriflame_panel/features/panel/screens/library_assets/library_assets_tab.dart';
 import 'package:oriflame_panel/features/panel/screens/members/members_tab.dart';
 import 'package:oriflame_panel/features/panel/screens/push_notifications/push_notifications_tab.dart';
-import 'package:oriflame_panel/features/panel/screens/review_accounts/archived_review_accounts_tab.dart';
 import 'package:oriflame_panel/features/panel/screens/review_accounts/review_accounts_tab.dart';
 import 'package:oriflame_panel/features/panel/screens/shared_content/shared_content_tab.dart';
 import 'package:oriflame_panel/features/panel/screens/sharing_control/sharing_control_tab.dart';

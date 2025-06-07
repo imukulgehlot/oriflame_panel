@@ -12,6 +12,7 @@ import 'package:oriflame_panel/features/panel/screens/review_accounts/widgets/ac
 class ReviewProfileDetailsDialog extends StatefulWidget {
   final List<SocialUserUIModel> users;
   final String userID;
+  final bool isArchived;
   final Function(String userID, bool isAccepted, BuildContext context,
       bool isFromDetailDialog) onActionTap;
 
@@ -19,7 +20,7 @@ class ReviewProfileDetailsDialog extends StatefulWidget {
     super.key,
     required this.users,
     required this.userID,
-    required this.onActionTap,
+    required this.onActionTap, required this.isArchived,
   });
 
   @override
@@ -85,6 +86,7 @@ class _ReviewProfileDetailsDialogState
             // Detail View
             AccountDetailView(
               pageController: _pageController,
+              isArchived: widget.isArchived,
               onPageChanged: (index) => setState(() => _currentPage = index),
               onActionTap: widget.onActionTap,
               onNextPage: _next,

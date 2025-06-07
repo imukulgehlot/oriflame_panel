@@ -46,5 +46,5 @@ class AppString {
   static const String goBackTo = "Go back to";
 
   // Preference Storage Keys
-  static const String currentBuildModeKey = "currentBuildModeKey";
+  static const String archivedAccountsTag = "archivedAccountsTag";
 }

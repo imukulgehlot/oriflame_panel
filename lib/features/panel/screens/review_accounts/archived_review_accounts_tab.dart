@@ -13,10 +13,11 @@ class ArchivedReviewAccountsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-      init: ReviewAccountsController(),
+      init: ReviewAccountsController()..isArchived = true,
+      tag: AppString.archivedAccountsTag,
       builder: (controller) => Scaffold(
         appBar: CustomAppBar(
-          title: AppString.reviewAccounts,
+          title: AppString.archive,
           showBackButton: true,
           lastScreenName: AppString.reviewAccounts,
         ),
@@ -62,6 +63,7 @@ class ArchivedReviewAccountsTab extends StatelessWidget {
 
                         return ReviewAccountGridTile(
                           account: list[index],
+                          isArchived: true,
                           onActionTap: (userID, isAccepted, context) =>
                               controller.onActionTap(
                                   userID, isAccepted, context, false),

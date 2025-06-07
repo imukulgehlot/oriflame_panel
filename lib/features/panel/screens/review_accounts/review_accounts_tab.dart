@@ -13,7 +13,7 @@ class ReviewAccountsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-      init: ReviewAccountsController(),
+      init: ReviewAccountsController()..isArchived = false,
       builder: (controller) => Scaffold(
         appBar: CustomAppBar(title: AppString.reviewAccounts),
         body: LayoutBuilder(

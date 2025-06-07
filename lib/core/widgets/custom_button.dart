@@ -242,8 +242,8 @@ class AppIconButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(Dimensions.commonRadius),
           side: BorderSide(
               color: showBorder
-                  ? AppColors.outlineColor
-                  : borderColor ?? AppColors.outlineColor),
+                  ? borderColor ?? AppColors.outlineColor
+                  : Colors.transparent),
         ),
         minimumSize: Size(0, Dimensions.h40),
       ),

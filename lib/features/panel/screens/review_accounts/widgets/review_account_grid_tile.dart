@@ -11,11 +11,13 @@ class ReviewAccountGridTile extends StatelessWidget {
     required this.account,
     required this.onActionTap,
     required this.onProfileTap,
+    this.isArchived = false
   });
 
   final Function(String userID, bool isAccepted,BuildContext context) onActionTap;
   final Function(BuildContext context, String userID) onProfileTap;
   final SocialUserUIModel account;
+  final bool isArchived;
 
   final _isHovered = false.obs;
 
@@ -133,6 +135,8 @@ class ReviewAccountGridTile extends StatelessWidget {
                               mainAxisSize: MainAxisSize.min,
                               spacing: Dimensions.w10,
                               children: [
+                                // Decline
+                                if(!isArchived)
                                 ActionButton(
                                   iconAsset: AppImages.icDeclineCross,
                                   size: Dimensions.h35,
@@ -144,6 +148,7 @@ class ReviewAccountGridTile extends StatelessWidget {
                                   backgroundColor: AppColors.redColor,
                                 ),
 
+                                // Approve
                                 ActionButton(
                                   iconAsset: AppImages.icApproveCheck,
                                   size: Dimensions.h35,
