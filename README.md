@@ -4,6 +4,7 @@
 A feature-rich admin panel built using **Flutter Web**, crafted as part of an interview task for Oriflame. This panel allows reviewing social media accounts with smooth UI, thoughtful interactions, and animated feedback.
 
 > 📢 **Best viewed in a full-screen browser window** for optimal layout and responsiveness.
+> **Live Preview:** [https://oriflame-panel.web.app](https://oriflame-panel.web.app)
 
 ---
 
